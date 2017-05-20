@@ -12,7 +12,7 @@
       :scm         {:url "https://github.com/RadicalZephyr/webfx"}
       :license     {"Eclipse Public License"
                     "http://www.eclipse.org/legal/epl-v10.html"}}
- jar {:main 'radicalzephyr.WebFX
+ jar {:main 'webfx.App
       :manifest {"Application-Name" "WebFX"}})
 
 (deftask build

@@ -1,4 +1,4 @@
-package radicalzephyr;
+package webfx;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -11,7 +11,7 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 
-public class WebFX extends Application {
+public class App extends Application {
     private String windowTitle;
 
     private String domain;

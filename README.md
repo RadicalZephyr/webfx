@@ -6,7 +6,7 @@ Webkit web view.
 ## Usage
 
 Start your webserver, pass a configuration map (`Map<String, String>`)
-to the static method `radicalzephyr.WebFX.start`.
+to the static method `webfx.WebFX.start`.
 
 Important options:
 
