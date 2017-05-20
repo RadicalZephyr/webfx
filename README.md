@@ -10,6 +10,7 @@ to the static method `radicalzephyr.WebFX.start`.
 
 Important options:
 
+- `windowTitle` - The text to set the window title to - Defaults to `WebFX`
 - `domain` - When combined with the port, determines the location of the
   page to show. Defaults to `localhost`
 - `port` - When combined with the domain, determinse the location of

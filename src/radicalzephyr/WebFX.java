@@ -12,8 +12,11 @@ import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 
 public class WebFX extends Application {
+    private String windowTitle;
+
     private String domain;
     private String port;
+
     private int width;
     private int height;
 
@@ -29,6 +32,8 @@ public class WebFX extends Application {
     public void init() throws Exception {
         Map<String, String> args = getParameters().getNamed();
 
+        this.windowTitle = args.getOrDefault("windowTitle", "Java WebFX Application");
+
         this.domain = args.getOrDefault("domain", "localhost");
         this.port   = args.getOrDefault("port", "3000");
 
@@ -38,6 +43,8 @@ public class WebFX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        primaryStage.setTitle(this.windowTitle);
+
         WebView browser = new WebView();
         WebEngine engine = browser.getEngine();
 
