@@ -41,14 +41,9 @@ public class WebFX extends Application {
         WebView browser = new WebView();
         WebEngine engine = browser.getEngine();
 
-        String domain = "localhost";
-        String port = "9393";
+        engine.load("http://" + this.domain + ":" + this.port);
 
-        engine.load("http://" + domain + ":" + port);
-
-        int width = 1024;
-        int height = 768;
-        Scene s = new Scene(browser, width, height);
+        Scene s = new Scene(browser, this.width, this.height);
 
         primaryStage.setScene(s);
         primaryStage.show();
