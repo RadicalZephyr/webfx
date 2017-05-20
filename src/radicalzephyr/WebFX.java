@@ -14,8 +14,16 @@ import javafx.stage.Stage;
 public class WebFX extends Application {
     private String domain;
     private String port;
-    private String width;
-    private String height;
+    private int width;
+    private int height;
+
+    private int getIntArgOrDefault(Map<String, String> args, String argName, int defaultValue) {
+        try {
+            return Integer.parseInt(args.getOrDefault(argName, ""));
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
 
     @Override
     public void init() throws Exception {
@@ -24,8 +32,8 @@ public class WebFX extends Application {
         this.domain = args.getOrDefault("domain", "localhost");
         this.port   = args.getOrDefault("port", "3000");
 
-        this.width  = args.getOrDefault("width", "1024");
-        this.height = args.getOrDefault("height", "768");
+        this.width  = getIntArgOrDefault(args, "width", 1024);
+        this.height = getIntArgOrDefault(args, "height", 768);
     }
 
     @Override
