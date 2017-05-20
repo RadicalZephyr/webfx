@@ -11,7 +11,8 @@
       :url         "https://github.com/RadicalZephyr/webfx"
       :scm         {:url "https://github.com/RadicalZephyr/webfx"}
       :license     {"Eclipse Public License"
-                    "http://www.eclipse.org/legal/epl-v10.html"}})
+                    "http://www.eclipse.org/legal/epl-v10.html"}}
+ jar {:main 'radicalzephyr.WebFX})
 
 (deftask build
   "Build and install the project locally."
