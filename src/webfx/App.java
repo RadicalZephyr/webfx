@@ -48,7 +48,7 @@ public class App extends Application {
         WebView browser = new WebView();
         WebEngine engine = browser.getEngine();
 
-        engine.load("http://" + this.domain + ":" + this.port);
+        engine.load(String.format("http://%s:%s", this.domain, this.port));
 
         Scene s = new Scene(browser, this.width, this.height);
 
