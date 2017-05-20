@@ -1,7 +1,8 @@
 (def project 'radicalzephyr/webfx)
 (def version "0.1.0-SNAPSHOT")
 
-(set-env! :resource-paths #{"src"})
+(set-env! :resource-paths #{"src"}
+          :dependencies [])
 
 (task-options!
  pom {:project     project
